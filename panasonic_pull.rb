@@ -9,6 +9,7 @@ csv_data = CSV.parse(URI.open("http://192.168.0.59/csv/InstVal.csv"), :headers =
 power = {
 	"main" => csv_data[5][1].to_i(16)*10,
 	"pv1" => csv_data[5][2].to_i(16),
+	"ecocute" => csv_data[5][5].to_i(16)*10,
 	"living_lights" => csv_data[5][17].to_i(16),
 	"utility_lights" => csv_data[5][18].to_i(16),
 	"mbr_wic_lights" => csv_data[5][19].to_i(16),
